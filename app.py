@@ -25,55 +25,112 @@ app.layout = html.Div([
             "MIDPOINT",
             id='what-to-show'
         ),
-        style = {'width': '365px'}
+        style={'width': '365px'}
     ),
+    # New var addition
+    html.H4("Select value for Duration String:"),
+    html.Div(
+        dcc.Dropdown(
+            ['60 S',
+             '120 S',
+             '1800 S (30 mins)',
+             '3600 S (1 hr)',
+             '14400 S (4hr)',
+             '28800 S (8 hrs)',
+             '1 D',
+             '2 D',
+             '1 W',
+             '1 M',
+             '1 Y'],
+            id='durationStr_input'
+        ),
+        style={'width': '365px'}
+    ),
+    html.H4("Select value for Bar Size Setting:"),
+    html.Div(
+        dcc.Dropdown(
+            ['1 secs',
+             '5 secs',
+             '10 secs',
+             '15 secs',
+             '30 secs',
+             '1 min',
+             '2 mins',
+             '3 mins',
+             '5 mins',
+             '10 mins',
+             '15 mins',
+             '20 mins',
+             '30 mins',
+             '1 hour',
+             '2 hours',
+             '3 hours',
+             '4 hours',
+             '8 hours',
+             '1 day',
+             '1 week',
+             '1 month'
+             ],
+            id='barSizeSetting_input'
+        ),
+        style={'width': '365px'}
+    ),
+    html.H4("Select value for useRTH:"),
+    html.Div(
+        dcc.Dropdown(
+            ['True', 'False'],'True',
+            id='useRTH_input'
+        ),
+        style={'width': '365px'}
+    ),
+
     html.H4("Select value for endDateTime:"),
     html.Div(
-        children = [
+        children=[
             html.P("You may select a specific endDateTime for the call to " + \
                    "fetch_historical_data. If any of the below is left empty, " + \
                    "the current present moment will be used.")
         ],
-        style = {'width': '365px'}
+        style={'width': '365px'}
     ),
     html.Div(
-        children = [
+        children=[
             html.Div(
-                children = [
+                children=[
                     html.Label('Date:'),
                     dcc.DatePickerSingle(id='edt-date')
                 ],
-                style = {
+                style={
                     'display': 'inline-block',
                     'margin-right': '20px',
                 }
             ),
             html.Div(
-                children = [
+                children=[
                     html.Label('Hour:'),
                     dcc.Dropdown(list(range(24)), id='edt-hour'),
                 ],
-                style = {
+                style={
                     'display': 'inline-block',
                     'padding-right': '5px'
                 }
             ),
             html.Div(
-                children = [
+                children=[
                     html.Label('Minute:'),
                     dcc.Dropdown(list(range(60)), id='edt-minute'),
                 ],
-                style = {
+                style={
                     'display': 'inline-block',
                     'padding-right': '5px'
                 }
             ),
             html.Div(
-                children = [
+                children=[
                     html.Label('Second:'),
                     dcc.Dropdown(list(range(60)), id='edt-second'),
                 ],
-                style = {'display': 'inline-block'}
+                style={'display': 'inline-block'}
             )
         ]
     ),
@@ -125,13 +182,14 @@ app.layout = html.Div([
     # Numeric input for the trade amount
     dcc.Input(id='trade-amt', value='20000', type='number'),
     # Submit button for the trade
-    html.Button('Trade', id='trade-button', n_clicks=0)
+    html.Button('Trade', id='trade-button', n_clicks=0),
 
 ])
 
+
 # Callback for what to do when submit-button is pressed
 @app.callback(
-    [ # there's more than one output here, so you have to use square brackets to pass it in as an array.
+    [  # there's more than one output here, so you have to use square brackets to pass it in as an array.
         Output(component_id='currency-output', component_property='children'),
         Output(component_id='candlestick-graph', component_property='figure')
     ],
@@ -143,10 +201,13 @@ app.layout = html.Div([
     #   of 'currency-input' at the time the button was pressed DOES get passed in.
     [State('currency-input', 'value'), State('what-to-show', 'value'),
      State('edt-date', 'date'), State('edt-hour', 'value'),
-     State('edt-minute', 'value'), State('edt-second', 'value')]
+     State('edt-minute', 'value'), State('edt-second', 'value'),
+     State('durationStr_input', 'value'), State('barSizeSetting_input', 'value'),
+     State('useRTH_input', 'value')]
 )
 def update_candlestick_graph(n_clicks, currency_string, what_to_show,
-                             edt_date, edt_hour, edt_minute, edt_second):
+                             edt_date, edt_hour, edt_minute, edt_second, durationStr_input, barSizeSetting_input,
+                             useRTH_input):
     # n_clicks doesn't
     # get used, we only include it for the dependency.
 
@@ -158,9 +219,9 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
     # First things first -- what currency pair history do you want to fetch?
     # Define it as a contract object!
     contract = Contract()
-    contract.symbol   = currency_string.split(".")[0]
-    contract.secType  = 'CASH'
-    contract.exchange = 'IDEALPRO' # 'IDEALPRO' is the currency exchange.
+    contract.symbol = currency_string.split(".")[0]
+    contract.secType = 'CASH'
+    contract.exchange = 'IDEALPRO'  # 'IDEALPRO' is the currency exchange.
     contract.currency = currency_string.split(".")[1]
 
     ############################################################################
@@ -175,28 +236,28 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
     # Some default values are provided below to help with your testing.
     # Don't forget -- you'll need to update the signature in this callback
     #   function to include your new vars!
-    # cph = fetch_historical_data(
-    #     contract=contract,
-    #     endDateTime='',
-    #     durationStr='30 D',       # <-- make a reactive input
-    #     barSizeSetting='1 hour',  # <-- make a reactive input
-    #     whatToShow=what_to_show,
-    #     useRTH=True               # <-- make a reactive input
-    # )
+    cph = fetch_historical_data(
+        contract=contract,
+        endDateTime='',
+        durationStr=durationStr_input,  # <-- make a reactive input
+        barSizeSetting=barSizeSetting_input,  # <-- make a reactive input
+        whatToShow=what_to_show,
+        useRTH=(useRTH_input=='True')  # <-- make a reactive input
+    )
     # # # Make the candlestick figure
-    # fig = go.Figure(
-    #     data=[
-    #         go.Candlestick(
-    #             x=cph['date'],
-    #             open=cph['open'],
-    #             high=cph['high'],
-    #             low=cph['low'],
-    #             close=cph['close']
-    #         )
-    #     ]
-    # )
+    fig = go.Figure(
+        data=[
+            go.Candlestick(
+                x=cph['date'],
+                open=cph['open'],
+                high=cph['high'],
+                low=cph['low'],
+                close=cph['close']
+            )
+        ]
+    )
     # # # Give the candlestick figure a title
-    # fig.update_layout(title=('Exchange Rate: ' + currency_string))
+    fig.update_layout(title=('Exchange Rate: ' + currency_string))
     ############################################################################
     ############################################################################
 
@@ -226,6 +287,7 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
     # Return your updated text to currency-output, and the figure to candlestick-graph outputs
     return ('Submitted query for ' + currency_string), fig
 
+
 # Callback for what to do when trade-button is pressed
 @app.callback(
     # We're going to output the result to trade-output
@@ -238,7 +300,7 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
     # We DON'T want to start executing trades just because n_clicks was initialized to 0!!!
     prevent_initial_call=True
 )
-def trade(n_clicks, action, trade_currency, trade_amt): # Still don't use n_clicks, but we need the dependency
+def trade(n_clicks, action, trade_currency, trade_amt):  # Still don't use n_clicks, but we need the dependency
 
     # Make the message that we want to send back to trade-output
     msg = action + ' ' + trade_amt + ' ' + trade_currency
@@ -252,6 +314,7 @@ def trade(n_clicks, action, trade_currency, trade_amt): # Still don't use n_clic
 
     # Return the message, which goes to the trade-output div's "children" attribute.
     return msg
+
 
 # Run it!
 if __name__ == '__main__':
