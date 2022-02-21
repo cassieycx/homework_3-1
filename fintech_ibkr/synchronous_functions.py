@@ -60,7 +60,6 @@ class ibkr_app(EWrapper, EClient):
              'low': [bar.low],
              'close': [bar.close]}
         )
-        # historical_data = historical_data.append({'date': bar.date, 'open': bar.open, 'high':bar.high,'low':bar.low,'close':bar.close}, ignore_index=True)
         self.historical_data = pd.concat([self.historical_data, inserted_row])
 
     def historicalDataEnd(self, reqId: int, start: str, end: str):

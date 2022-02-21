@@ -265,22 +265,25 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
     ############################################################################
     # This block returns a candlestick plot of apple stock prices. You'll need
     # to delete or comment out this block and use your currency prices instead.
-    df = pd.read_csv(
-        'https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv'
-    )
-    fig = go.Figure(
-        data=[
-            go.Candlestick(
-                x=df['Date'],
-                open=df['AAPL.Open'],
-                high=df['AAPL.High'],
-                low=df['AAPL.Low'],
-                close=df['AAPL.Close']
-            )
-        ]
-    )
-
-    currency_string = 'default Apple price data fetch'
+    #
+    #
+    #
+    # # Get your historical data
+    #
+    # df = pd.read_csv(cph)
+    # fig = go.Figure(
+    #     data=[
+    #         go.Candlestick(
+    #             x=df['Date'],
+    #             open=df['AAPL.Open'],
+    #             high=df['AAPL.High'],
+    #             low=df['AAPL.Low'],
+    #             close=df['AAPL.Close']
+    #         )
+    #     ]
+    # )
+    #
+    # currency_string = 'default Apple price data fetch'
     ############################################################################
     ############################################################################
 
