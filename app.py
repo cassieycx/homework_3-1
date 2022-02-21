@@ -41,7 +41,7 @@ app.layout = html.Div([
              '2 D',
              '1 W',
              '1 M',
-             '1 Y'],
+             '1 Y'],'1 M',
             id='durationStr_input'
         ),
         style={'width': '365px'}
@@ -70,7 +70,7 @@ app.layout = html.Div([
              '1 day',
              '1 week',
              '1 month'
-             ],
+             ], '1 hour',
             id='barSizeSetting_input'
         ),
         style={'width': '365px'}
