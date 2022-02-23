@@ -1,0 +1,89 @@
+
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:23:18.83 
+Tue 02/22/2022 19:23:18.83
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+Terminate batch job (Y/N)? 
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:26:00.15 
+Tue 02/22/2022 19:26:00.15
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+Error:  -1   2107   HMDS data farm connection is inactive but should be available upon demand.cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+HistoricalDataEnd. ReqId: 1 from 20220122  19:27:24 to 20220222  19:27:24
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:27:29 to 20220222  19:27:29
+Terminate batch job (Y/N)? 
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:27:53.44 
+Tue 02/22/2022 19:27:53.44
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+Terminate batch job (Y/N)? 
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:28:55.55 
+Tue 02/22/2022 19:28:55.55
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+Terminate batch job (Y/N)? 
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:30:38.87 
+Tue 02/22/2022 19:30:38.87
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
