@@ -87,3 +87,83 @@ You should consider upgrading via the 'C:\Users\cy177\Desktop\Code\homework_3-1\
 C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
 WARNING:waitress.queue:Task queue depth is 1
 WARNING:waitress.queue:Task queue depth is 1
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:30:54 to 20220222  19:30:54
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:31:29 to 20220222  19:31:29
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:31:37 to 20220222  19:31:37
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:31:46 to 20220222  19:31:46
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:32:12 to 20220222  19:32:12
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:32:17 to 20220222  19:32:17
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:32:18 to 20220222  19:32:18
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:32:22 to 20220222  19:32:22
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:33:37 to 20220222  19:33:37
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:33:47 to 20220222  19:33:47
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:33:49 to 20220222  19:33:49
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  19:33:51 to 20220222  19:33:51
+Traceback (most recent call last):
+  File "C:\Users\cy177\Desktop\Code\homework_3-1\venv\lib\site-packages\waitress\server.py", line 166, in run
+    self.asyncore.loop(
+  File "C:\Users\cy177\Desktop\Code\homework_3-1\venv\lib\site-packages\waitress\wasyncore.py", line 245, in loop
+
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 19:35:43.30 
+Tue 02/22/2022 19:35:43.30
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 20:00:18.38 
+Tue 02/22/2022 20:00:18.38
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+From https://github.com/cassieycx/homework_3-1
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
