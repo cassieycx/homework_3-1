@@ -167,3 +167,58 @@ WARNING:waitress.queue:Task queue depth is 1
 WARNING:waitress.queue:Task queue depth is 1
 WARNING:waitress.queue:Task queue depth is 2
 WARNING:waitress.queue:Task queue depth is 1
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:00:42 to 20220222  20:00:42
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:01:34 to 20220222  20:01:34
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:07:29 to 20220222  20:07:29
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:07:46 to 20220222  20:07:46
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:10:41 to 20220222  20:10:41
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220221  20:16:46 to 20220222  20:16:46
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220215  20:16:53 to 20220222  20:16:53
+Error:  -1   2107   HMDS data farm connection is inactive but should be available upon demand.cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+HistoricalDataEnd. ReqId: 1 from 20220122  20:26:20 to 20220222  20:26:20
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:26:31 to 20220222  20:26:31
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:28:48 to 20220222  20:28:48
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:28:50 to 20220222  20:28:50
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:31:20 to 20220222  20:31:20
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:31:23 to 20220222  20:31:23
+Error:  -1   2106   HMDS data farm connection is OK:cashhmds
+Error:  -1   2158   Sec-def data farm connection is OK:secdefil
+HistoricalDataEnd. ReqId: 1 from 20220122  20:31:46 to 20220222  20:31:46
+
+C:\Users\cy177\Desktop\Code\homework_3-1>echo Tue 02/22/2022 20:32:43.92 
+Tue 02/22/2022 20:32:43.92
+
+C:\Users\cy177\Desktop\Code\homework_3-1>cd C:\Users\cy177\Desktop\Code\homework_3-1 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>git pull https://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@github.com/cassieycx/homework_3-1.git 
+Already up to date.
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe -m pip install -r requirements.txt -q 
+
+C:\Users\cy177\Desktop\Code\homework_3-1>venv\Scripts\python.exe server.py 
