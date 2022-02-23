@@ -14,7 +14,7 @@ server = app.server
 app.layout = html.Div([
 
     # Section title
-    html.H3("Section 1: Fetch & Display exchange rate historical data c"),
+    html.H3("Section 1: Fetch & Display exchange rate historical data"),
     html.H4("Select value for whatToShow:"),
     html.Div(
         dcc.Dropdown(
