@@ -3,3 +3,5 @@ dash
 ibapi
 jupyter
 kaleido
+waitress
+gitpython
