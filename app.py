@@ -5,6 +5,8 @@ from dash import html
 from dash.dependencies import Input, Output, State
 from ibapi.contract import Contract
 from fintech_ibkr import *
+
+import time
 import pandas as pd
 
 # Make a Dash app!
@@ -41,7 +43,7 @@ app.layout = html.Div([
              '2 D',
              '1 W',
              '1 M',
-             '1 Y'],'1 M',
+             '1 Y'], '1 M',
             id='durationStr_input'
         ),
         style={'width': '365px'}
@@ -78,7 +80,7 @@ app.layout = html.Div([
     html.H4("Select value for useRTH:"),
     html.Div(
         dcc.Dropdown(
-            ['True', 'False'],'True',
+            ['True', 'False'], 'True',
             id='useRTH_input'
         ),
         style={'width': '365px'}
@@ -161,7 +163,10 @@ app.layout = html.Div([
     # Div to hold the initial instructions and the updated info once submit is pressed
     html.Div(id='currency-output', children='Enter a currency code and press submit'),
     # Div to hold the candlestick graph
-    html.Div([dcc.Graph(id='candlestick-graph')]),
+    html.Div([dcc.Loading(children=[dcc.Graph(id='candlestick-graph')],
+                          type="circle",
+                          )]),
+    # html.Div([dcc.Graph(id='candlestick-graph')]),
     # Another line break
     html.Br(),
     # Section title
@@ -210,7 +215,7 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
                              useRTH_input):
     # n_clicks doesn't
     # get used, we only include it for the dependency.
-
+    time.sleep(1)
     if any([i is None for i in [edt_date, edt_hour, edt_minute, edt_second]]):
         endDateTime = ''
     else:
@@ -242,7 +247,7 @@ def update_candlestick_graph(n_clicks, currency_string, what_to_show,
         durationStr=durationStr_input,  # <-- make a reactive input
         barSizeSetting=barSizeSetting_input,  # <-- make a reactive input
         whatToShow=what_to_show,
-        useRTH=(useRTH_input=='True')  # <-- make a reactive input
+        useRTH=(useRTH_input == 'True')  # <-- make a reactive input
     )
     # # # Make the candlestick figure
     fig = go.Figure(
